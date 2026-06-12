@@ -2,6 +2,10 @@ CREATE DATABASE StackAcademy;
 
 GO
 
+USE StackAcademy;
+
+GO
+
 CREATE TABLE Aluno(
 	-- Id do aluno em específico
 	IdAluno UNIQUEIDENTIFIER PRIMARY KEY NOT NULL,
@@ -9,6 +13,8 @@ CREATE TABLE Aluno(
 	Nome VARCHAR(255) NOT NULL,
 	-- Email do aluno, não pode ficar vazio e deve ser único
 	Email NVARCHAR(255) NOT NULL UNIQUE,
+	-- Senha do aluno, não pode aceitar vazio
+	Senha NVARCHAR(40) NOT NULL,
     -- CPF do aluno, não pode ficar vazio e deve ser único
 	Cpf NVARCHAR(14) NOT NULL UNIQUE,
 	-- Imagem do aluno, ele pode deixar vazio
@@ -24,6 +30,8 @@ CREATE TABLE Professor(
 	Nome VARCHAR(255) NOT NULL,
 	-- Email do professor, não pode ser vazio e deve ser único
 	Email NVARCHAR(255) NOT NULL UNIQUE,
+	-- Senha do professor, não deve aceitar vazio
+	Senha NVARCHAR(40),
 	-- CPF do professor, não pode ser vazio e deve ser único
 	Cpf NVARCHAR(14) NOT NULL UNIQUE,
 	-- Imagem do professor, ele não pode ser vazio
