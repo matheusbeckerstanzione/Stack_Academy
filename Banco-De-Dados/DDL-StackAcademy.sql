@@ -31,7 +31,7 @@ CREATE TABLE Professor(
 	-- Email do professor, não pode ser vazio e deve ser único
 	Email NVARCHAR(255) NOT NULL UNIQUE,
 	-- Senha do professor, não deve aceitar vazio
-	Senha NVARCHAR(40),
+	Senha NVARCHAR(40) NOT NULL,
 	-- CPF do professor, não pode ser vazio e deve ser único
 	Cpf NVARCHAR(14) NOT NULL UNIQUE,
 	-- Imagem do professor, ele não pode ser vazio
