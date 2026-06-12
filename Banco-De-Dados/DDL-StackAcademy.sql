@@ -18,7 +18,9 @@ CREATE TABLE Aluno(
     -- CPF do aluno, não pode ficar vazio e deve ser único
 	Cpf NVARCHAR(14) NOT NULL UNIQUE,
 	-- Imagem do aluno, ele pode deixar vazio
-	Imagem VARCHAR(100)
+	Imagem VARCHAR(100),
+
+	senha NVARCHAR(40) NOT NULL
 );
 
 GO
@@ -35,7 +37,9 @@ CREATE TABLE Professor(
 	-- CPF do professor, não pode ser vazio e deve ser único
 	Cpf NVARCHAR(14) NOT NULL UNIQUE,
 	-- Imagem do professor, ele não pode ser vazio
-	Imagem VARCHAR(100) NOT NULL
+	Imagem VARCHAR(100) NOT NULL,
+
+	senha NVARCHAR(40) NOT NULL
 );
 
 GO
@@ -59,6 +63,8 @@ CREATE TABLE Curso(
 	-- Data do curso, quando ele será encerrado
 	DataFim DATETIME NOT NULL,
 
+
+
 	-- Puxa a categoria no qual ele está cadastrado
 	IdCategoria UNIQUEIDENTIFIER FOREIGN KEY REFERENCES Categoria(IdCategoria),
 	IdProfessor UNIQUEIDENTIFIER FOREIGN KEY REFERENCES Professor(IdProfessor)
@@ -76,3 +82,4 @@ CREATE TABLE AlunoCurso(
 	-- Id do aluno e curso que estão entrelaçados
 	PRIMARY KEY(IdAluno, IdCurso)
 );
+
