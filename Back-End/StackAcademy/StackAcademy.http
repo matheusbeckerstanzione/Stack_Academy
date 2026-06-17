@@ -1,0 +1,6 @@
+@StackAcademy_HostAddress = http://localhost:5105
+
+GET {{StackAcademy_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

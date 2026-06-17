@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\54060195898\\Desktop\\Stack_Academy\\Back-End\\StackAcademy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4F234F11-8569-10BC-B3E4-CF1E3CB35AE1}|StackAcademy.csproj|c:\\users\\54060195898\\desktop\\stack_academy\\back-end\\stackacademy\\repositories\\alunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F234F11-8569-10BC-B3E4-CF1E3CB35AE1}|StackAcademy.csproj|solutionrelative:repositories\\alunorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F234F11-8569-10BC-B3E4-CF1E3CB35AE1}|StackAcademy.csproj|c:\\users\\54060195898\\desktop\\stack_academy\\back-end\\stackacademy\\repositories\\professorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F234F11-8569-10BC-B3E4-CF1E3CB35AE1}|StackAcademy.csproj|solutionrelative:repositories\\professorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProfessorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\54060195898\\Desktop\\Stack_Academy\\Back-End\\StackAcademy\\Repositories\\ProfessorRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ProfessorRepository.cs",
+              "ToolTip": "C:\\Users\\54060195898\\Desktop\\Stack_Academy\\Back-End\\StackAcademy\\Repositories\\ProfessorRepository.cs",
+              "RelativeToolTip": "Repositories\\ProfessorRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T11:48:39.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AlunoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\54060195898\\Desktop\\Stack_Academy\\Back-End\\StackAcademy\\Repositories\\AlunoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\AlunoRepository.cs",
+              "ToolTip": "C:\\Users\\54060195898\\Desktop\\Stack_Academy\\Back-End\\StackAcademy\\Repositories\\AlunoRepository.cs",
+              "RelativeToolTip": "Repositories\\AlunoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIEAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-17T11:46:59.684Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
