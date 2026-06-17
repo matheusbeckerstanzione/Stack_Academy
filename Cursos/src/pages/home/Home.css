@@ -1,0 +1,222 @@
+/* ── Home wrapper ── */
+.home-wrapper {
+  background-color: #0d0d0d;
+  min-height: 150vh;
+  overflow-x: hidden;
+}
+
+/* ── Hero ── */
+.home-hero {
+  padding: 120px 32px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.home-hero-title {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+
+.home-hero-title span {
+  color: #7c4dff;
+}
+
+.home-hero-sub {
+  color: #444;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ── Faixa diagonal ── */
+.home-band {
+  position: relative;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+/* Fading nas laterais */
+.vel-fade-left,
+.vel-fade-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.vel-fade-left  { left: 0;  background: linear-gradient(to right, #0d0d0d 0%, transparent 100%); }
+.vel-fade-right { right: 0; background: linear-gradient(to left,  #0d0d0d 0%, transparent 100%); }
+
+/* Skew diagonal */
+.band-skew {
+  transform: skewY(-5deg);
+  padding: 20px 0;
+}
+
+/* ── Fileira infinita ── */
+.inf-row-outer {
+  overflow: hidden;
+  width: 100%;
+  padding: 24px 0;
+}
+
+.inf-row-inner {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  will-change: transform;
+  /* CSS animation — translateX(-50%) com 2 cópias = loop perfeito sem corte */
+  animation: marquee linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Card grande ── */
+.big-card {
+  position: relative;
+  flex-shrink: 0;
+  width: 300px;
+  height: 420px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 28px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  /* counter-skew para os cards ficarem na vertical */
+  transform: skewY(5deg);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+/* Glow interno */
+.big-card-glow {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Borda brilhante no hover */
+.big-card-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Todo conteúdo acima do glow */
+.big-card > *:not(.big-card-glow):not(.big-card-border) {
+  position: relative;
+  z-index: 2;
+}
+
+/* Número */
+.big-card-rank {
+  font-size: 0.7rem;
+  font-family: monospace;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+/* Badge categoria */
+.big-card-cat {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* Título */
+.big-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f0f0f0;
+  font-family: monospace;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  flex: 1;
+  min-height: 3.5em;
+}
+
+/* Professor */
+.big-card-prof {
+  font-size: 0.82rem;
+  color: #777;
+}
+
+/* Status */
+.big-card-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-family: monospace;
+}
+
+.big-card-status.ativo   { color: #2ecc71; }
+.big-card-status.inativo { color: #e74c3c; }
+
+.big-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.big-card-status.ativo   .big-dot { background: #2ecc71; box-shadow: 0 0 6px #2ecc71; }
+.big-card-status.inativo .big-dot { background: #e74c3c; box-shadow: 0 0 6px #e74c3c; }
+
+/* Botão "Saiba mais" */
+.big-card-cta {
+  margin-top: auto;
+  padding: 10px 18px;
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: "Montserrat", sans-serif;
+}
+
+.big-card-cta:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Espaço de scroll ── */
+.home-scroll-space { height: 20vh; }
+
+/* ── Responsivo ── */
+@media (max-width: 600px) {
+  .home-hero-title { font-size: 2rem; }
+  .big-card { width: 240px; height: 340px; }
+  .vel-fade-left, .vel-fade-right { width: 80px; }
+}

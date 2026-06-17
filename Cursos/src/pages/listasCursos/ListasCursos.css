@@ -1,0 +1,437 @@
+/* ── Reset & base ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Page wrapper ── */
+.cc-page {
+  min-height: calc(100vh - 130px);
+  /* header + footer subtracted */
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 16px;
+  color: #e0e0e0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.cc-page {
+  background: radial-gradient(
+    ellipse at center,
+    #7c4dff 0%,
+    #3a0597 30%,
+    #000000 75%
+  );
+}
+
+/* ── Dashboard container ── */
+.cc-dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (max-width: 992px) {
+  .cc-dashboard {
+    flex-direction: column;
+    align-items: center;
+    max-width: 760px;
+  }
+}
+
+/* ── Card container ── */
+.cc-card {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 32px 36px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+}
+
+/* ── Título ── */
+.cc-title {
+  color: #7c4dff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+/* ── Formulário ── */
+.cc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cc-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cc-label {
+  color: #aaaaaa;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+}
+
+.cc-input {
+  width: 100%;
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cc-input::placeholder {
+  color: #555555;
+}
+
+.cc-input:focus {
+  border-color: #7c4dff;
+  box-shadow: 0 0 0 2px rgba(124, 77, 255, 0.2);
+}
+
+/* ── Checkbox styling ── */
+.cc-field-group-checkbox {
+  margin: 4px 0;
+}
+
+.cc-label-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cccccc;
+  font-size: 0.95rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cc-label-checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #111111;
+  border: 1px solid #333333;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.cc-label-checkbox input[type="checkbox"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #ffffff;
+  background-color: CanvasText;
+  transform-origin: center;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.cc-label-checkbox input[type="checkbox"]:checked {
+  background-color: #7c4dff;
+  border-color: #7c4dff;
+}
+
+.cc-label-checkbox input[type="checkbox"]:checked::before {
+  transform: scale(1.1);
+}
+
+/* ── Botões de ação ── */
+.cc-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cc-btn-primary {
+  flex: 1;
+  background-color: #7c4dff;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.cc-btn-primary:hover {
+  background-color: #6a3de8;
+}
+
+.cc-btn-primary:active {
+  transform: scale(0.98);
+}
+
+.cc-btn-cancel {
+  background-color: transparent;
+  border: 1px solid #444444;
+  border-radius: 8px;
+  color: #aaaaaa;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 12px 20px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.cc-btn-cancel:hover {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+/* ── Tabela Card ── */
+.cc-table-card {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.cc-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 32px;
+  border-bottom: 1px solid #2a2a2a;
+  background-color: rgba(26, 26, 26, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 600px) {
+  .cc-table-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 20px;
+  }
+}
+
+.cc-table-title {
+  color: #7c4dff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.cc-search-wrapper {
+  width: 250px;
+}
+
+@media (max-width: 600px) {
+  .cc-search-wrapper {
+    width: 100%;
+  }
+}
+
+.cc-search-input {
+  width: 100%;
+  background-color: #111111;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 0.85rem;
+  padding: 8px 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.cc-search-input:focus {
+  border-color: #7c4dff;
+}
+
+table.cc-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.cc-table thead tr {
+  background-color: #242424;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+table.cc-table thead th {
+  color: #aaaaaa;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 14px 24px;
+  text-align: left;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+table.cc-table tbody tr {
+  border-bottom: 1px solid #242424;
+  transition: background-color 0.15s;
+}
+
+table.cc-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+table.cc-table tbody tr:hover {
+  background-color: #222222;
+}
+
+table.cc-table tbody td {
+  color: #d0d0d0;
+  font-size: 0.95rem;
+  padding: 16px 24px;
+  vertical-align: middle;
+}
+
+.cc-td-bold {
+  font-weight: 600;
+  color: #7c4dff !important;
+}
+
+/* Category Badge */
+.cc-badge-category {
+  background-color: rgba(124, 77, 255, 0.1);
+  color: #a27cff;
+  border: 1px solid rgba(124, 77, 255, 0.3);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Status Badge */
+.cc-status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cc-status-badge.ativo {
+  background-color: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.cc-status-badge.inativo {
+  background-color: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+/* ── Ações da tabela ── */
+.cc-td-actions {
+  white-space: nowrap;
+}
+
+.cc-table-action {
+  background: none;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  color: #aaaaaa;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  margin-right: 8px;
+  transition: all 0.2s;
+}
+
+.cc-table-action.editar:hover {
+  border-color: #7c4dff;
+  color: #7c4dff;
+  background-color: rgba(124, 77, 255, 0.1);
+}
+
+.cc-table-action.excluir:hover {
+  border-color: #e74c3c;
+  color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* ── Vazio ── */
+.cc-empty-cell {
+  text-align: center;
+  padding: 48px 0 !important;
+}
+
+.cc-empty {
+  color: #666666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.cc-empty-icon {
+  font-size: 2rem;
+}
+
+.cc-empty p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* ── Botão Adicionar Curso ── */
+.cc-btn-add {
+  background-color: #7c4dff;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff !important;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.cc-btn-add:hover {
+  background-color: #6a3de8;
+}
+
+.cc-btn-add:active {
+  transform: scale(0.98);
+}
+
+/* ── Responsivo ── */
+@media (max-width: 768px) {
+  .cc-page {
+    padding: 24px 12px;
+  }
+
+  table.cc-table thead th,
+  table.cc-table tbody td {
+    padding: 12px 16px;
+    font-size: 0.85rem;
+  }
+}

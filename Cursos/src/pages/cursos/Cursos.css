@@ -1,0 +1,543 @@
+/* Cursos.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Segoe UI", "Arial", sans-serif;
+}   
+
+.footer {
+    font-family: "Times New Roman", serif;
+}
+
+
+
+#root {
+
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+
+
+/* Container */
+
+.container-cursos {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding-top: 65px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    background:
+        linear-gradient(rgba(17, 17, 17, 0.85),
+            rgba(0, 0, 0, 0.95)),
+        url("../../assets/img/ebook2.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+
+    overflow-x: hidden;
+
+}
+
+
+
+/* Formulario */
+
+.form-cursos {
+
+    width: 100%;
+
+    max-width: 420px;
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+
+    padding: 35px;
+
+
+    border-radius: 15px;
+
+}
+
+
+
+/* Titulo */
+
+.form-cursos h1 {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+
+    color: #6d28ff;
+
+    font-size: 32px;
+
+}
+
+
+
+
+
+/* Inputs */
+
+.form-cursos input {
+
+    width: 100%;
+
+    height: 50px;
+
+
+    background: #1c1c1c;
+
+
+    border: 1px solid #292929;
+
+    border-radius: 8px;
+
+
+    padding: 0 15px;
+
+
+    color: #dcdcdc;
+
+    outline: none;
+
+
+    font-size: 14px;
+
+
+    transition: .3s;
+
+}
+
+
+
+
+.form-cursos input::placeholder {
+
+    color: #a8a8a8;
+
+}
+
+
+
+
+.form-cursos input:focus {
+
+    border-color: #7C3AFF;
+
+
+    box-shadow:
+
+        0 0 12px #7C3AFF50;
+
+}
+
+
+
+
+
+/* SELECT */
+
+.form-cursos select {
+
+
+    width: 100%;
+
+    height: 50px;
+
+
+    background: #1c1c1c;
+
+
+    border: 1px solid #292929;
+
+    border-radius: 8px;
+
+
+    padding: 0 45px 0 15px;
+
+
+    color: #a8a8a8;
+
+
+    outline: none;
+
+
+    font-size: 14px;
+
+
+    cursor: pointer;
+
+
+    appearance: none;
+
+
+    background-image:
+
+
+        linear-gradient(45deg, transparent 50%, #aaa 50%),
+        linear-gradient(135deg, #aaa 50%, transparent 50%);
+
+
+    background-position:
+
+
+        calc(100% - 22px) 21px,
+        calc(100% - 16px) 21px;
+
+
+    background-size: 6px 6px;
+
+
+    background-repeat: no-repeat;
+
+
+    transition: .8s;
+
+}
+
+
+
+
+
+/* Quando selecionar */
+
+.form-cursos select:valid {
+
+    color: #dcdcdc;
+
+}
+
+
+
+
+.form-cursos select:focus {
+
+
+    border-color: #7C3AFF;
+
+
+    box-shadow:
+
+        0 0 12px #7C3AFF50;
+
+}
+
+
+
+
+.form-cursos select:hover {
+
+    border-color: #7C3AFF;
+
+}
+
+
+
+
+
+/* Opções */
+
+.form-cursos select option {
+
+
+    background: #111;
+
+
+    color: #dcdcdc;
+
+
+    font-size: 15px;
+
+}
+
+
+
+
+
+
+
+/* Botão */
+
+.form-cursos button {
+
+
+    width: 120px;
+
+    height: 42px;
+
+
+    margin: 15px auto 0;
+
+
+    border: none;
+
+    border-radius: 8px;
+
+
+    background: #7C3AFF;
+
+
+    color: white;
+
+
+    font-size: 14px;
+
+
+    cursor: pointer;
+
+
+    transition: .3s;
+
+}
+
+
+
+
+.form-cursos button:hover {
+
+
+    background: #8f5cff;
+
+
+    box-shadow:
+
+
+        0 0 20px #7C3AFF;
+
+
+    transform: scale(1.05);
+
+}
+
+
+
+
+
+
+
+/* Responsivo */
+
+@media(max-width:600px) {
+
+
+    .container-cursos {
+
+        padding-top: 80px;
+
+        align-items: flex-start;
+
+    }
+
+
+
+    .form-cursos {
+
+
+        padding: 25px;
+
+        max-width: 100%;
+
+    }
+
+
+
+    .form-cursos h1 {
+
+        font-size: 26px;
+
+    }
+
+
+}
+
+/* SELECT CUSTOMIZADO */
+
+
+.select-box {
+
+    width: 100%;
+
+    position: relative;
+
+}
+
+
+
+
+.select-selected {
+
+
+    height: 50px;
+
+
+    background: #1c1c1c;
+
+
+    border: 1px solid #292929;
+
+
+    border-radius: 8px;
+
+
+    padding: 0 15px;
+
+
+    color: #a8a8a8;
+
+
+    display: flex;
+
+
+    align-items: center;
+
+
+    justify-content: space-between;
+
+
+    font-size: 14px;
+
+
+    cursor: pointer;
+
+
+    transition: .3s;
+
+}
+
+
+
+.select-selected:hover {
+
+
+    border-color: #7C3AFF;
+
+}
+
+
+
+
+.select-selected span {
+
+
+    font-size: 20px;
+
+}
+
+
+
+
+
+.select-options {
+
+
+    position: absolute;
+
+
+    width: 100%;
+
+
+    top: 58px;
+
+
+    background: #111;
+
+
+    border: 1px solid #292929;
+
+
+    border-radius: 8px;
+
+
+    overflow: hidden;
+
+
+    z-index: 10;
+
+
+    animation: aparecer .25s ease;
+
+}
+
+
+
+
+.select-options div {
+
+
+    padding: 14px 15px;
+
+
+    color: #ddd;
+
+
+    cursor: pointer;
+
+
+    transition: .2s;
+
+}
+
+
+
+.select-options div:hover {
+
+
+    background: #7C3AFF;
+
+
+    color: white;
+
+}
+
+
+
+
+@keyframes aparecer {
+
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-10px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}

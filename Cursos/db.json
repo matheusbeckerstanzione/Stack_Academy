@@ -1,0 +1,49 @@
+{
+  "cursos": [
+    {
+      "titulo": "Desenvolvimento Web Backend",
+      "categoria": "Backend",
+      "professor": "Eduardo Costa",
+      "ativo": true,
+      "id": "2"
+    },
+    {
+      "titulo": "Desenvolvimento em Jogos",
+      "categoria": "Gamificação",
+      "professor": "Marcos",
+      "ativo": true,
+      "id": "_6bU8m6QVW0"
+    },
+    {
+      "titulo": "Desingn Grafico e UIX",
+      "categoria": "Design/UIX",
+      "professor": "Alexia",
+      "ativo": true,
+      "id": "8uY4IM5qkys"
+    },
+    {
+      "titulo": "Codigo Binario",
+      "categoria": "Binario",
+      "professor": "Jucelino",
+      "ativo": false,
+      "id": "W9mdVKdOn5s"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Admin Teste",
+      "email": "admin@teste.com",
+      "senha": "123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "nome": "Aluno Teste",
+      "email": "aluno@teste.com",
+      "senha": "123",
+      "role": "aluno"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
