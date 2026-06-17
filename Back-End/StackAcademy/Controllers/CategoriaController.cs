@@ -16,12 +16,12 @@ public class CategoriaController : Controller
         _CategoriaRepository = CategoriaRepository;
     }
 
-    [HttpGet("{id}")]
-    public IActionResult GetById(Guid id)
+    [HttpGet("{Id}")]
+    public IActionResult GetById(Guid Id)
     {
         try
         {
-            return Ok(_CategoriaRepository.BuscarPorId(id));
+            return Ok(_CategoriaRepository.BuscarPorId(Id));
         }
         catch (Exception ex)
         {
@@ -56,12 +56,12 @@ public class CategoriaController : Controller
         }
     }
 
-    [HttpPut("{id}")]
-    public IActionResult PutById(Guid id, Categoria CategoriaAtualizada) 
+    [HttpPut("{Id}")]
+    public IActionResult PutById(Guid Id, Categoria CategoriaAtualizada) 
     {
         try
         {
-            _CategoriaRepository.AtualizarIdUrl(id, CategoriaAtualizada);
+            _CategoriaRepository.AtualizarIdUrl(Id, CategoriaAtualizada);
             return NoContent();
         }
         catch (Exception ex)
@@ -84,12 +84,12 @@ public class CategoriaController : Controller
         }
     }
 
-    [HttpDelete("{id}")]
-    public IActionResult Delete(Guid id) 
+    [HttpDelete("{Id}")]
+    public IActionResult Delete(Guid Id) 
     {
         try
         {
-            _CategoriaRepository.Deletar(id);
+            _CategoriaRepository.Deletar(Id);
             return NoContent();
         }
         catch (Exception ex)

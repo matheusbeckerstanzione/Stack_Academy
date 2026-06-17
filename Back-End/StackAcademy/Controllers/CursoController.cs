@@ -16,12 +16,12 @@ public class CursoController : Controller
         _CursoRepository = CursoRepository;
     }
 
-    [HttpGet("{id}")]
-    public IActionResult GetByid(Guid id)
+    [HttpGet("{Id}")]
+    public IActionResult GetByid(Guid Id)
     {
         try
         {
-            return Ok(_CursoRepository.BuscarPorId(id));
+            return Ok(_CursoRepository.BuscarPorId(Id));
         }
         catch (Exception ex)
         {
@@ -56,12 +56,12 @@ public class CursoController : Controller
         }
     }
 
-    [HttpPut("{id}")]
-    public IActionResult PutById(Guid id, Curso CursoAtualizado)
+    [HttpPut("{Id}")]
+    public IActionResult PutById(Guid Id, Curso CursoAtualizado)
     {
         try
         {
-            _CursoRepository.AtualizarIdUrl(id, CursoAtualizado);
+            _CursoRepository.AtualizarIdUrl(Id, CursoAtualizado);
             return NoContent();
         }
         catch (Exception ex)
@@ -84,12 +84,12 @@ public class CursoController : Controller
         }
     }
 
-    [HttpDelete("{id}")]
-    public IActionResult Delete(Guid id) 
+    [HttpDelete("{Id}")]
+    public IActionResult Delete(Guid Id) 
     {
         try
         {
-            _CursoRepository.Deletar(id);
+            _CursoRepository.Deletar(Id);
             return NoContent();
         }
         catch (Exception ex)

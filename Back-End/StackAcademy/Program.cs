@@ -4,6 +4,7 @@ using Microsoft.OpenApi;
 using StackAcademy.BdContextCursos;
 using StackAcademy.Interface;
 using StackAcademy.Repositories;
+using StackAcademy.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,8 +13,10 @@ builder.Services.AddDbContext<CursosContext>
     (options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaltConnection")));
 
 // adiciona o repositorio
+builder.Services.AddScoped<IAlunoRepository, AlunoRepository>();
 builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 builder.Services.AddScoped<ICursoRepository, CursoRepository>();
+builder.Services.AddScoped<IProfessorRepository, ProfessorRepository>();
 
 //Adicionar servicos de jwt Bearrer(forma de autenticação)
 builder.Services.AddAuthentication(options =>
@@ -59,7 +62,7 @@ builder.Services.AddSwaggerGen(options =>
         },
         License = new Microsoft.OpenApi.OpenApiLicense
         {
-            Name = "Example License",
+            Name = "Matheus-Becker",
             Url = new Uri("https://example.com/licenca")
         }
 
